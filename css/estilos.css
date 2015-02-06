@@ -1,0 +1,97 @@
+@font-face{
+	font-family: "Roboto";
+	src: url(../font/roboto/Roboto-Light.ttf);
+}
+
+body, html{
+	background: #DDD;
+	color: #111;
+	font-family: "Roboto";
+	height: 100%;
+	max-width: 100%;
+	text-align: center;
+	width: 100%;
+}
+h3{
+    margin: 0;
+    padding: 0;
+}
+input:required:invalid{
+	background: rgba(215,80,80,0.5);
+}
+input:required:valid{
+	background: rgba(99,242,109,0.5);
+}
+
+#informacion{
+	padding: 0;
+	margin: 0;
+	width: 60%;
+}
+#informacion, #simulacion{
+	display: inline-block;
+	vertical-align: top;
+}
+#interfaz{
+	display: block;
+	width: 100%;
+}
+#mesa{
+	background-color: #333;
+    border-radius: 50%;
+    height: 300px;
+    margin: 100px;
+	position: relative;
+    width: 300px;
+}
+#quantumForm{
+	border: solid 1px rgba(0,0,0,0.4);
+	border-radius: 10px;
+	box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+	display: inline-block;
+	font-size: 1.5em;
+	margin: 0 auto;
+	margin-top: 2em;
+	padding: 1.5em;
+}
+#simulacion{
+	width: 500px;
+	height: 500px;
+}
+
+
+.datos{
+	border: solid 1px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	box-shadow: 5px 5px 8px rgba(0,0,0,0.3);
+	display: inline-block;
+	margin: 0.5em 0.2em;
+	max-width: 30%;
+	width: 30%;
+}
+.filosofo{
+	background: url(../imagenes/persona.png);
+	background-size: cover;
+}
+.palillo{
+	background: url(../imagenes/palillo.png); 
+	background-size: cover;
+    z-index: 5;
+}
+.plato{
+	background: url(../imagenes/arroz.png); 
+	background-size: cover;
+    z-index: 10;
+}
+.filosofo,.plato,.palillo{
+	background-position: center;
+	border-radius: 50%;
+	height: 80px;
+	position: absolute;
+	width: 80px;
+}
+
+
+::-webkit-scrollbar { 
+    display: none; 
+}
