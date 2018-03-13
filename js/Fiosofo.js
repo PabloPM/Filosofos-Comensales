@@ -22,7 +22,12 @@ Filosofo.ordenar = function (filosofos) {
 
   return orden
 }
-Filosofo.actualizarPalillos = function () { Filosofo._palillos = Filosofo._palillos.map( _ => true) }
+Filosofo.actualizarPalillos = function () { 
+  let palillosUI = document.querySelectorAll('.palillo') 
+  Filosofo._palillos = Filosofo._palillos.map( _ => true)
+  for (let i = 0; i < palillosUI.length; i++)
+    palillosUI[i].style.display = 'block'
+}
 
 Filosofo.prototype.cambiarEstado = function () {
   let estados     = ['normal', 'comiendo', 'pensando']
@@ -49,8 +54,6 @@ Filosofo.prototype.cambiarEstado = function () {
   this.porcentaje = porcentaje >= 100 ? 100 : porcentaje
 
   if (this.porcentaje === 100) this.estado = 'sin comida'
-  
-  console.log(Filosofo._palillos)
 }
 
 Filosofo.prototype.actualizarUI = function () {

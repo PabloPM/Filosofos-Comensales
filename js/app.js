@@ -48,6 +48,8 @@ function iniciarSimulacion () {
 }
 
 function simulacion () {
+  Filosofo.actualizarPalillos()
+
   document.querySelector('#ronda').textContent = `Ronda: ${ ronda++ }`
   document.querySelector('#satisfechos').textContent = `Satisfechos: ${ 5 - filosofos.length }`
   console.log(`Ronda: ${ ronda } ${Filosofo.quantum}`)
@@ -58,5 +60,4 @@ function simulacion () {
   })
 
   filosofos = filosofos.filter(filosofo => filosofo.porcentaje !== 100)
-  Filosofo.actualizarPalillos()
 }
